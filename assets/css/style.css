@@ -16,8 +16,8 @@ h1 {
   background-color: lightblue;
 }
 
-.row {
-  background-color: lightblue;
+.col-md-2 {
+  background-color: skyblue;
 }
 
 .col-lg-3 {
