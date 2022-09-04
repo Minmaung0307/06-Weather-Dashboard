@@ -12,6 +12,13 @@ h1 {
           text-shadow: 2px 1px grey;
 }
 
+.card-body {
+  background-color: lightblue;
+}
+
+.row {
+  background-color: lightblue;
+}
 
 
 /*
