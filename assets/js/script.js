@@ -82,12 +82,6 @@ function getFiveDayWeather(lat, lon) {
       for (var i = 0; i < data.list.length; i++) {
         // console.log(data.list[i].dt_txt);
         if (data.list[i].dt_txt.includes("03:00:00")) {
-          // var cityForecast = document.createElement("div");
-          // var titleForecast = document.createElement("h3");
-          // forecastWeather.textContent =
-          //   "Next Five Day Weather Forecast of " + data.city.name;
-          // cityForecast.appendChild();
-
           var forecastDiv = document.createElement("div");
 
           var tempP = document.createElement("p");
@@ -114,7 +108,6 @@ function getFiveDayWeather(lat, lon) {
           forecastDiv.appendChild(humidP);
           forecastDiv.appendChild(windP);
           forecastContainer.appendChild(forecastDiv);
-          // fivedayForecast.appendChild(forecastDiv);
           // console.log(data.list[i]);
         }
       }
