@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+
+  <body>
+    <header class="container-fluid">
+      <h1>Weather Dashboard</h1>
+    </header>
+
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3">
+          <!--"bg-light"-->
+          <h5 class="mt-1">Search for a City:</h5>
+          <div class="input-group mb-3">
+            <input
+              id="city"
+              type="text"
+              class="form-control"
+              placeholder="Enter your city"
+              aria-label="Enter your city"
+            />
+          </div>
+          <div class="input-group-append">
+            <button
+              style="width: 100%"
+              class="btn btn-primary mb-3"
+              type="button"
+              id="search"
+              style="background-color: skyblue; border: none"
+            >
+              Search
+            </button>
+            <!-- <button class="btn btn-primary" type="button" id="search">
+              <i class="fas fa-search"></i>
+            </button> -->
+          </div>
+<div id="showHistory">
+
+</div>
+          <form id="history" style="margin-bottom: 5px"></form>
+          <button
+            style="
+              width: 100%;
+              background-color: rgb(198, 14, 14);
+              border: none;
+            "
+            class="btn btn-primary mb-3"
+            type="button"
+            id="clear"
+          >
+            Clear history
+          </button>
+        </div>
+
+        <article class="col-lg-9">
+          <div class="card-body" id="current-weather">
+            <h2 id="cityName" class="city-name align-middle"></h2>
+            <img id="img" alt="" />
+            <p id="temp"></p>
+            <p id="humid"></p>
+            <p id="windSpeed"></p>
+            <p id="UVi"></p>
+          </div>
+
+          <!-- <div class="row mr-0">
+            <div class="col-lg-11 card m-3 d-none" id="now"
+              style="background-color: skyblue"> -->
+
+          <!-- <div class="row d-none" id="fiveday-Weather">
+            <div class="col-12">
+              <h3>Next Five Day Weather Forecasts</h3>
+            </div>
+          </div> -->
+
+          <div class="row" id="fiveday-Forecast">
+            <div id="titleForecast"></div>
+            <!-- <div
+              class="col-md-2 forecast bg-primary text-white m-2 rounded"
+            ></div>
+            <div
+              class="col-md-2 forecast bg-primary text-white m-2 rounded"
+            ></div>
+            <div
+              class="col-md-2 forecast bg-primary text-white m-2 rounded"
+            ></div>
+            <div
+              class="col-md-2 forecast bg-primary text-white m-2 rounded"
+            ></div>
+            <div
+              class="col-md-2 forecast bg-primary text-white m-2 rounded"
+            ></div> -->
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
