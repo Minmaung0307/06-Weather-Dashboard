@@ -1,8 +1,5 @@
 var apiKey = "607ebc04ab1b6a5d43954dccb5254963";
 
-//
-// var city = document.getElementById("city");
-
 //displays
 var img = document.getElementById("img");
 var temp = document.getElementById("temp");
