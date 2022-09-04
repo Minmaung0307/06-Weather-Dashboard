@@ -9,4 +9,4 @@ https://minmaung0307.github.io/weather-dashboard/
 
 # Github
 
-git@github.com:Minmaung0307/weather-dashboard.git
+https://github.com/Minmaung0307/weather-api.git
