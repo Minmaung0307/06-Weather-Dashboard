@@ -47,7 +47,6 @@ function getCurrentWeather(lat, lon) {
         "src",
         "https://openweathermap.org/img/wn/" + iconId + "@2x.png"
       );
-      // fivedayWeather.textContent = data.name;
       // var lat = data[0].lat;
       // var lon = data[0].lon;
     });
@@ -65,9 +64,6 @@ function getFiveDayWeather(lat, lon) {
   // console.log(requestUrl);
   fetch(requestUrl)
     .then(function (response) {
-      // forecastWeather.textContent =
-      //   "Next Five Day Weather Forecast of " + data.city.name;
-
       return response.json();
     })
     .then(function (data) {
