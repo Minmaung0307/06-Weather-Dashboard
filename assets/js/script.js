@@ -140,8 +140,6 @@ function getLatLon(city) {
 
 //button listener
 searchBtn.addEventListener("click", function () {
-  //what happens when search btn is clicked
-
   //cityname will be recorded
   var cityName = city.value;
   // console.log(historyListData);
@@ -178,7 +176,3 @@ function clearHistory() {
   historyListData = [];
   showHistoryList();
 }
-
-// if (historyListData.length > 0) {
-//   getLatLon(historyListData[historyListData.length - 1]);
-// }
