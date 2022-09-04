@@ -19,8 +19,6 @@ var currentWeather = document.getElementById("current-weather");
 var forecastWeather = document.getElementById("fitleForecast");
 var fivedayForecast = document.getElementById("fiveday-Forecast");
 
-// var showWeather = localStorage.getItem("city") || "";
-
 //Get Current Weather
 function getCurrentWeather(lat, lon) {
   var requestUrl =
