@@ -20,6 +20,9 @@ h1 {
   background-color: lightblue;
 }
 
+.col-lg-3 {
+  background-color: rgb(238, 235, 235);
+}
 
 /*
 :root {
