@@ -5,7 +5,7 @@
 
 # URL
 
-https://minmaung0307.github.io/weather-dashboard/
+https://minmaung0307.github.io/weather-api/
 
 # Github
 
