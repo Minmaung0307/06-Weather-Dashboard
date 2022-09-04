@@ -12,8 +12,8 @@ h1 {
           text-shadow: 2px 1px grey;
 }
 
-.card-body {
-  background-color: rgb(229, 221, 191);
+#current-weather {
+  background-color: rgb(243, 240, 229);
 }
 
 .col-md-2 {
