@@ -30,6 +30,14 @@ h1 {
   justify-content: space-around;
 }
 
+#img {
+  background-color: lightblue;
+}
+
+.col-md-12 {
+  margin: 20px;
+}
+
 /*
 :root {
   --blue: #007bff;
