@@ -124,6 +124,7 @@ function getLatLon(city) {
     city +
     "&limit=5&appid=" +
     apiKey;
+
   // console.log(requestUrl);
   fetch(requestUrl)
     .then(function (response) {
@@ -143,7 +144,10 @@ searchBtn.addEventListener("click", function () {
   //cityname will be recorded
   var cityName = city.value;
   // console.log(historyListData);
-  historyListData.push(cityName);
+  if (historyListData.indexOf(cityName) == -1) {
+    historyListData.push(cityName);
+  }
+  // historyListData.push(cityName);
   localStorage.setItem("search", JSON.stringify(historyListData));
   // console.log(cityName);
   getLatLon(cityName);
@@ -157,13 +161,14 @@ clearBtn.addEventListener("click", function () {
 function showHistoryList() {
   showHistory.innerHTML = "";
   for (var i = 0; i < historyListData.length; i++) {
-    var historyItem = document.createElement("input");
+    const historyItem = document.createElement("input");
     historyItem.setAttribute("type", "text");
     historyItem.setAttribute("readonly", true);
     historyItem.setAttribute("class", "form-control d-block bg-white");
     historyItem.setAttribute("value", historyListData[i]);
-    historyItem.addEventListener("click", function (hys = historyListData[i]) {
-      getLatLon(hys);
+    historyItem.addEventListener("click", function () {
+      // alert(historyItem.value);
+      getLatLon(historyItem.value);
     });
     showHistory.append(historyItem);
   }
