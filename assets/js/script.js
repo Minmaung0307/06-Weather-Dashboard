@@ -5,7 +5,7 @@ var img = document.getElementById("img");
 var temp = document.getElementById("temp");
 var humid = document.getElementById("humid");
 var winSpeed = document.getElementById("windSpeed");
-// var UVi = document.getElementById("UVi");
+var UVi = document.getElementById("UVi");
 
 //buttons
 var searchBtn = document.getElementById("search");
@@ -22,7 +22,7 @@ var fivedayForecast = document.getElementById("fiveday-Forecast");
 //Get Current Weather
 function getCurrentWeather(lat, lon) {
   var requestUrl =
-    "https://api.openweathermap.org/data/2.5/weather?lat=" +
+    "https://api.openweathermap.org/data/2.5/onecall?lat=" +
     lat +
     "&lon=" +
     lon +
@@ -36,13 +36,14 @@ function getCurrentWeather(lat, lon) {
     .then(function (data) {
       // console.log("data");
       // console.log(data);
-      cityName.textContent = "Current Weather of " + data.name;
-      temp.textContent = "Temperature: " + data.main.temp;
-      humid.textContent = "Humidity: " + data.main.humidity;
-      winSpeed.textContent = "Windspeed: " + data.wind.speed;
+      cityName.textContent = "Current Weather of " + data.current.name;
+      temp.textContent = "Temperature: " + data.current.temp;
+      humid.textContent = "Humidity: " + data.current.humidity;
+      winSpeed.textContent = "Windspeed: " + data.current.wind_speed;
+      UVi.textContent = "UVi: " + data.current.uvi;
 
       var icon = document.getElementById("img");
-      var iconId = data.weather[0].icon;
+      var iconId = data.current.weather[0].icon;
       icon.setAttribute(
         "src",
         "https://openweathermap.org/img/wn/" + iconId + "@2x.png"
