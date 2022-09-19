@@ -35,12 +35,21 @@ function getCurrentWeather(lat, lon) {
     })
     .then(function (data) {
       // console.log("data");
-      // console.log(data);
-      cityName.textContent = "Current Weather of " + data.current.name;
+      console.log(data);
+      // cityName.textContent = "Current Weather of " + data.current.name;
       temp.textContent = "Temperature: " + data.current.temp;
       humid.textContent = "Humidity: " + data.current.humidity;
       winSpeed.textContent = "Windspeed: " + data.current.wind_speed;
       UVi.textContent = "UVi: " + data.current.uvi;
+      var uvibg = "";
+      if (data.current.uvi <= 2) {
+        uvibg = "badge badge-success";
+      } else if (data.current.uvi >= 3 && data.current.uvi >= 7) {
+        uvibg = "badge badge-warning";
+      } else {
+        uvibg = "badge badge-danger";
+      }
+      UVi.setAttribute("class", uvibg);
 
       var icon = document.getElementById("img");
       var iconId = data.current.weather[0].icon;
@@ -68,8 +77,9 @@ function getFiveDayWeather(lat, lon) {
       return response.json();
     })
     .then(function (data) {
-      // console.log(data.list);
+      // console.log(data);
       // console.log(data.list[1].weather[0].icon);
+      cityName.textContent = "Current Weather of " + data.city.name;
       var url = data.url;
 
       var forecastContainer = document.createElement("div");
@@ -132,7 +142,7 @@ function getLatLon(city) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
+      // console.log(data);
       var lat = data[0].lat;
       var lon = data[0].lon;
       getCurrentWeather(lat, lon);
